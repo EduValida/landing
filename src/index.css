@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+color-scheme: light;
+
+--page-bg: #f8fbff;
+--surface: #ffffff;
+--surface-soft: #eef7ff;
+
+--text-main: #0f172a;
+--text-muted: #475569;
+
+--brand-blue: #0f6fdc;
+--brand-blue-dark: #0b4f9f;
+--brand-cyan: #18c7e8;
+--brand-soft: #e5f7ff;
+
+--border-soft: #d7e8f5;
+--shadow-soft: 0 18px 45px rgba(15, 111, 220, 0.10);
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+min-width: 320px;
+min-height: 100vh;
+background:
+radial-gradient(circle at 85% 8%, rgba(24, 199, 232, 0.20), transparent 28%),
+radial-gradient(circle at 10% 12%, rgba(15, 111, 220, 0.10), transparent 26%),
+linear-gradient(180deg, #ffffff 0%, var(--page-bg) 45%, #eef7ff 100%);
+color: var(--text-main);
+font-family: "Ubuntu", sans-serif;
+}
+
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+pointer-events: none;
+background:
+linear-gradient(rgba(15, 111, 220, 0.035) 1px, transparent 1px),
+linear-gradient(90deg, rgba(15, 111, 220, 0.035) 1px, transparent 1px);
+background-size: 56px 56px;
+mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+#root {
+min-height: 100vh;
+}
+
+@layer components {
+.section-kicker {
+@apply text-sm uppercase tracking-[0.26em] font-semibold;
+color: var(--brand-blue);
+}
+
+.section-title {
+@apply mt-3 text-3xl leading-tight sm:text-4xl font-bold;
+color: var(--text-main);
+}
+
+.soft-card {
+background: var(--surface);
+border: 1px solid var(--border-soft);
+box-shadow: var(--shadow-soft);
+}
+
+.blue-card {
+background: linear-gradient(135deg, #f4fbff 0%, #e9f7ff 100%);
+border: 1px solid var(--border-soft);
+box-shadow: var(--shadow-soft);
+}
+
+.gradient-text {
+background: linear-gradient(90deg, var(--brand-blue), var(--brand-cyan));
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+
+.blue-button {
+@apply inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold transition;
+background: linear-gradient(90deg, var(--brand-blue), var(--brand-cyan));
+color: white;
+box-shadow: 0 12px 28px rgba(15, 111, 220, 0.22);
+}
+
+.blue-button:hover {
+transform: translateY(-1px);
+box-shadow: 0 16px 36px rgba(15, 111, 220, 0.28);
+}
+
+.blue-divider {
+@apply h-1 w-12 rounded-full;
+background: linear-gradient(90deg, var(--brand-blue), var(--brand-cyan));
+}
+}
