@@ -270,12 +270,14 @@ export const newsSection = {
   emptyDescription:
     "As atualizações oficiais do GT-EduValida serão publicadas nesta página.",
   items: [
-    // {
-    //   date: "Mês/Ano",
-    //   text: "Texto da notícia.",
-    //   href: "https://exemplo.com/noticia",
-    //   linkLabel: "Leia mais",
-    // },
+    {
+      date: "Julho/2026",
+      text:
+        "O GT-EduValida realizou sua reunião de kick-off na UFCSPA, marcando oficialmente o início das atividades do projeto. O encontro reuniu representantes das instituições parceiras para apresentar os objetivos, alinhar o planejamento dos próximos meses e discutir as primeiras ações para o desenvolvimento da plataforma nacional de emissão, validação e verificação de microcertificações interoperáveis.",
+      image: "/noticias/kickoff.jpeg", // Foto do kick-off
+      href: "#",
+      //linkLabel: "Leia mais",
+    },
   ],
 };
 

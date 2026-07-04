@@ -2,31 +2,41 @@ import { newsSection } from "../content/landingContent";
 
 function NewsItem({ item }) {
   return (
-    <article className="grid gap-4 py-7 sm:grid-cols-[150px_1fr] sm:gap-8">
-      <p className="text-xs uppercase tracking-[0.28em] text-blue-600 font-semibold pt-1">
+    <article className="grid gap-6 py-8 sm:grid-cols-[150px_1fr]">
+      <p className="pt-1 text-xs font-semibold uppercase tracking-[0.28em] text-blue-600">
         {item.date}
       </p>
 
-      <p className="text-[17px] leading-[1.85] text-slate-700">
-        {item.text}
-        {item.href && (
-          <>
-            {" "}
-            <a
-              href={item.href}
-              target="_blank"
-              rel="noreferrer"
-              className="font-semibold text-blue-600 underline decoration-blue-200 underline-offset-4 transition-colors hover:text-blue-700 hover:decoration-blue-600"
-            >
-              {item.linkLabel || "Leia mais"}
-            </a>
-          </>
+      <div className="space-y-5">
+        {item.image && (
+          <img
+            src={item.image}
+            alt={item.linkLabel || "Imagem da notícia"}
+            className="w-full rounded-xl border border-slate-200 object-cover shadow-sm"
+          />
         )}
-      </p>
+
+        <p className="text-[17px] leading-[1.85] text-slate-700">
+          {item.text}
+
+          {item.href && (
+            <>
+              {" "}
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-blue-600 underline decoration-blue-200 underline-offset-4 hover:text-blue-700"
+              >
+                {item.linkLabel || "Leia mais"}
+              </a>
+            </>
+          )}
+        </p>
+      </div>
     </article>
   );
 }
-
 export default function News() {
   const hasNews = newsSection.items.length > 0;
 
