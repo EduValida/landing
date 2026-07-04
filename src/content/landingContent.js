@@ -275,7 +275,7 @@ export const newsSection = {
       text:
         "O GT-EduValida realizou sua reunião de kick-off na UFCSPA, marcando oficialmente o início das atividades do projeto. O encontro reuniu representantes das instituições parceiras para apresentar os objetivos, alinhar o planejamento dos próximos meses e discutir as primeiras ações para o desenvolvimento da plataforma nacional de emissão, validação e verificação de microcertificações interoperáveis.",
       image: "/noticias/kickoff.jpeg", // Foto do kick-off
-      href: "#",
+      //href: "#",
       //linkLabel: "Leia mais",
     },
   ],
