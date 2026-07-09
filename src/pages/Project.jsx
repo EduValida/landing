@@ -7,7 +7,7 @@ export default function Project() {
       {/* problema & proposta  --> Temos que rever os textos e tal */}
       <section>
         <div className="grid gap-16 lg:grid-cols-[1fr_1.4fr] items-start">
-          <div className="sticky top-28">
+          <div className="top-28">
             <p className="text-xs uppercase tracking-[0.28em] text-blue-600 font-semibold mb-3">
               {projectSection.kicker}
             </p>
@@ -50,7 +50,7 @@ export default function Project() {
       {/* Estrutura e etc */}
       <section className="border-t border-slate-200 pt-12">
         <div className="grid gap-16 lg:grid-cols-[1fr_1.4fr] items-start">
-          <div className="sticky top-28">
+          <div className="top-28">
             <p className="text-xs uppercase tracking-[0.28em] text-blue-600 font-semibold mb-3">
               {architectureSection.kicker}
             </p>
@@ -71,7 +71,7 @@ export default function Project() {
           </div>
         </div>
       </section>
-{/* Financiadora */}
+      {/* Financiadora */}
 
       <section className="border-t border-slate-200 pt-20">
         <div>
